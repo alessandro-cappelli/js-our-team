@@ -33,7 +33,7 @@ const team = [
 
 let personTeam = document.querySelector('.team-container');
 
-for (let i=0; i<team.length; i++){
+for (let key in team){
   personTeam.innerHTML += `
   <div class="team-card>"
     <div class="card-image>"
