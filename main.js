@@ -30,3 +30,9 @@ const team = [
     image: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
+
+const personTeam = document.getElementByClassName("team-container");
+
+for (let i=1; i<team.length; i++){
+  
+}
