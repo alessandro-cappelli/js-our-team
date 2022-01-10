@@ -35,13 +35,13 @@ let personTeam = document.querySelector('.team-container');
 
 for (let key in team){
   personTeam.innerHTML += `
-  <div class="team-card>"
-    <div class="card-image>"
-      <img src="img/${team.image}" alt="${team.name}"/>
+  <div class="team-card">
+    <div class="card-image">
+      <img src="img/${team[key].image}" alt="${team[key].name}"/>
     </div>
     <div class="card-text">
-      <h3>${team.name}</h3>
-      <p>${team.role}</p>
+      <h3>${team[key].name}</h3>
+      <p>${team[key].role}</p>
     </div>
   </div>`
 
