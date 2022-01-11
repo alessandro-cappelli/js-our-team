@@ -48,4 +48,30 @@ for (let key in team){
 }
 console.log(personTeam)
 
+//bonus
+const addBtn = document.getElementById('addMemberButton')
 
+addBtn.addEventListener("click",addCard)
+
+function addCard(){
+  const newCard = {
+    name: document.getElementById('name').value, 
+    role: document.getElementById('role').value, 
+    image: document.getElementById('image').value 
+  }
+  team.push(newCard)
+  getCardCode(newCard)
+}
+
+function getCardCode(cardobj){
+  document.querySelector('.team-container').innerHTML +=`
+  <div class="team-card">
+    <div class="card-image">
+      <img src="${cardobj.image}" alt="${cardobj.name}"/>
+    </div>
+    <div class="card-text">
+      <h3>${cardobj.name}</h3>
+      <p>${cardobj.role}</p>
+    </div>
+  </div>`
+}
